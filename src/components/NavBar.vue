@@ -11,13 +11,20 @@
         >
           Home
         </router-link>
-        <router-link
-          v-if="!isAuthenticated"
-          to="/login"
-          class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
-        >
-          Login
-        </router-link>
+        <div v-if="!isAuthenticated">
+          <router-link
+            to="/login"
+            class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+          >
+            Login
+          </router-link>
+          <router-link
+            to="/signup"
+            class="btn btn-ghost btn-sm rounded-btn hover:text-content-100"
+          >
+            SignUp
+          </router-link>
+        </div>
         <div v-else>
           <router-link
             to="/secret"
